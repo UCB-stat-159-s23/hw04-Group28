@@ -5,7 +5,7 @@ from ligotools import readligo
 
 
 def test_read_hdf5():
-    filename = 'GW150914_4_template.hdf5'
+    filename = 'data/GW150914_4_template.hdf5'
     
     if os.path.isfile(filename):
         strain, gpsStart, ts, qmask, shortnameList, injmask, injnameList = read_hdf5(filename)
@@ -24,7 +24,7 @@ def test_read_hdf5():
 		
 		
 def test_loaddata():
-    filename = 'L-L1_LOSC_4_V2-1126259446-32.hdf5'
+    filename = 'data/L-L1_LOSC_4_V2-1126259446-32.hdf5'
     
     if os.path.isfile(filename):
         strain, time, channel_dict = loaddata(filename, 'L1')
@@ -39,7 +39,7 @@ def test_loaddata():
 		
 		
 def test_dq2segs():
-    filename = 'H-H1_LOSC_4_V2-1126259446-32.hdf5'
+    filename = 'data/H-H1_LOSC_4_V2-1126259446-32.hdf5'
 
     if os.path.isfile(filename):
         strain, time, channel_dict = loaddata(filename, 'H1')
@@ -53,7 +53,7 @@ def test_dq2segs():
 		
 		
 def test_dq_channel_to_seglist():
-    filename = 'H-H1_LOSC_4_V2-1126259446-32.hdf5'
+    filename = 'data/H-H1_LOSC_4_V2-1126259446-32.hdf5'
 
     if os.path.isfile(filename):
         strain, time, channel_dict = loaddata(filename, 'H1')
