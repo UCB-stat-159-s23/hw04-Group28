@@ -5,7 +5,7 @@ from scipy.interpolate import interp1d
 from scipy.signal import butter, filtfilt, iirdesign, zpk2tf, freqz
 import h5py
 import json
-import pytest
+
 
 # the IPython magic below must be commented out in the .py file, since it doesn't work there.
 
@@ -46,3 +46,7 @@ def reqshift(data,fshift=100,sample_rate=4096):
     y[0:nbins]=0.
     z = np.fft.irfft(y)
     return z
+
+
+
+
