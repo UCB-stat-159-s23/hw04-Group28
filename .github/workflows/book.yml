@@ -31,7 +31,8 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build .
+      jupyter-book build . --kernel /home/jovyan/.local/share/jupyter/kernels/ligo
+
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
