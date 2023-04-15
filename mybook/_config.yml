@@ -7,12 +7,11 @@ logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
-# execute:
-#   execute_notebooks: force
+execute:
+  execute_notebooks: force
   
 execution:
-  notebook_interface: jupyterlab
-  kernel_name: ligo
+  notebook_kernel: ligo
 
 # Define the name of the latex output file for PDF builds
 latex:
