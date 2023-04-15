@@ -22,13 +22,20 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+    
+    
+    # Install jupyter-book
+    - name: Install jupyter-book
+      run: pip install jupyter-book
+      
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build .
-    # Push the book's HTML to github-pages
+        jupyter-book build . --kernel /home/jovyan/.local/share/jupyter/kernels/ligo
+     
+     # Push the book's HTML to github-pages
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./_build/html
